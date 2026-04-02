@@ -1,0 +1,221 @@
+/* ==========================================================================
+   STORY PAGE STYLES — Nourish by Nuema
+   Imports shared design system, then adds story-specific layout.
+   ========================================================================== */
+
+@import url('/shared.css');
+
+
+/* ==========================================================================
+   PAGE LAYOUT
+   ========================================================================== */
+
+.story-page {
+  min-height: 100vh;
+  background-image: url('/assets/story-bg-pink.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: var(--space-2xl) var(--space-3xl) var(--space-xl);
+}
+
+.story-header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-content {
+  background-image: url('/assets/story-bg-cream.png');
+  background-size: 100% 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-3xl) 0;
+  position: relative;
+}
+
+.story-inner {
+  max-width: 78%;
+  margin: 0 auto;
+}
+
+
+/* (header styles are above with layout) */
+
+
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+
+.story-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.story-page-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-weight-normal);
+  font-style: italic;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.section-heading--spaced {
+  margin-bottom: var(--space-lg);
+}
+
+/* ==========================================================================
+   OUR MISSION
+   ========================================================================== */
+
+.mission-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.mission-text p {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  margin-bottom: var(--space-lg);
+}
+
+.mission-cta {
+  margin-top: var(--space-lg);
+}
+
+
+/* ==========================================================================
+   DIVIDER
+   ========================================================================== */
+
+.story-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-xl) 0 var(--space-2xl);
+}
+
+
+/* ==========================================================================
+   MEET THE FOUNDER
+   ========================================================================== */
+
+.founder-intro {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-lg);
+}
+
+.founder-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.founder-col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.founder-content p {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  margin-bottom: var(--space-lg);
+}
+
+.founder-italic em {
+  font-style: italic;
+}
+
+.founder-photo {
+  margin-top: var(--space-lg);
+  max-width: 340px;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* ==========================================================================
+   FOOTER / POT IMAGE
+   ========================================================================== */
+
+.story-pot {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-lg);
+  margin-right: -45%;
+}
+
+@media (min-width: 1100px) {
+  .story-pot {
+    margin-right: -40%;
+  }
+}
+
+.story-pot .pot-image {
+  width: 160px;
+}
+
+
+/* ==========================================================================
+   MOBILE RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .story-page {
+    padding: var(--space-xl) 0;
+  }
+
+  .story-header {
+    padding-left: var(--space-lg);
+  }
+
+  .story-content {
+    padding: var(--space-2xl) 0 var(--space-xl);
+    max-width: 100%;
+    background-image: url('/assets/story-bg-cream-mobile.png');
+  }
+
+  .story-inner {
+    padding: 0 var(--space-lg);
+  }
+
+  .mission-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .founder-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .founder-photo {
+    max-width: 100%;
+  }
+
+  .story-pot {
+    margin-right: 0;
+  }
+
+  .story-pot .pot-image {
+    width: 120px;
+  }
+}
