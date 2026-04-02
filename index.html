@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nourish by Nuema — Fresh Bone Broth Delivered</title>
+  <meta name="description" content="Nourish by Nuema delivers fresh bone broth to your door so you can start your day nourished. A hyper-local experience in New York City.">
+  <link rel="icon" type="image/png" href="assets/nuema_logo.png">
+
+  <!-- Google Fonts — Cardo (body) + EB Garamond (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SVG filter for rough/stamp-like border effect -->
+  <svg style="position:absolute;width:0;height:0;">
+    <filter id="rough-border">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="4" result="noise" seed="2" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+
+  <div class="page">
+
+    <!-- ====== LEFT PANEL ====== -->
+    <div class="panel-left">
+      <div class="logo">
+        <img src="assets/nourish_logo.png" alt="Nourish by Nuema">
+      </div>
+
+      <p class="hero-text">
+        nourish by nuema delivers <strong>fresh bone broth</strong> to your door every morning so you can start your day <em>nourished.</em>
+      </p>
+
+      <p class="hero-subtitle">A hyper-local experience in New York City</p>
+
+      <div class="hero-cta">
+        <a href="#" class="btn btn--outline">Read our story</a>
+      </div>
+
+      <img src="assets/pot.png" alt="Ceramic pot illustration" class="pot-image">
+    </div>
+
+    <!-- ====== RIGHT PANEL ====== -->
+    <div class="panel-right">
+
+      <!-- FORM -->
+      <form id="waitlist-form" class="form-container" novalidate>
+        <h2 class="form-title">Be the first to know when we start delivering</h2>
+
+        <!-- Full Name -->
+        <div class="form-group">
+          <label class="form-label">Full Name<span class="required">*</span></label>
+          <div class="form-row">
+            <div class="form-field">
+              <input type="text" name="firstName" class="form-input" placeholder="Your first name" required>
+              <div class="form-error">First name is required</div>
+            </div>
+            <div class="form-field">
+              <input type="text" name="lastName" class="form-input" placeholder="Your last name">
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label class="form-label">Email address<span class="required">*</span></label>
+          <input type="email" name="email" class="form-input" placeholder="Your email address" required>
+          <div class="form-error">Please enter a valid email</div>
+        </div>
+
+        <!-- Neighborhood -->
+        <div class="form-group">
+          <label class="form-label">Your neighborhood<span class="required">*</span></label>
+          <select name="neighborhood" class="form-select" required>
+            <option value="" disabled selected class="select-placeholder">Select neighborhood</option>
+            <option value="Upper East Side">Upper East Side</option>
+            <option value="Upper West Side">Upper West Side</option>
+            <option value="Midtown">Midtown</option>
+            <option value="Chelsea">Chelsea</option>
+            <option value="Greenwich Village">Greenwich Village</option>
+            <option value="East Village">East Village</option>
+            <option value="Lower East Side">Lower East Side</option>
+            <option value="SoHo">SoHo</option>
+            <option value="Tribeca">Tribeca</option>
+            <option value="Financial District">Financial District</option>
+            <option value="Brooklyn Heights">Brooklyn Heights</option>
+            <option value="Williamsburg">Williamsburg</option>
+            <option value="Park Slope">Park Slope</option>
+            <option value="Other">Other</option>
+          </select>
+          <div class="form-error">Please select a neighborhood</div>
+        </div>
+
+        <!-- Time -->
+        <div class="form-group">
+          <label class="form-label">What time would you want to receive your broth?</label>
+          <div class="form-check-group">
+            <label class="form-check">
+              <input type="checkbox" name="time" value="Morning"> Morning
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="time" value="Afternoon"> Afternoon
+            </label>
+            <label class="form-check">
+              <input type="checkbox" name="time" value="Evening"> Evening
+            </label>
+          </div>
+        </div>
+
+        <!-- Days -->
+        <div class="form-group">
+          <label class="form-label">Which days would you like to have your broth?</label>
+          <div class="form-check-group days-grid">
+            <label class="form-check"><input type="checkbox" name="days" value="Sat"> Sat</label>
+            <label class="form-check"><input type="checkbox" name="days" value="Sun"> Sun</label>
+            <label class="form-check"><input type="checkbox" name="days" value="Mon"> Mon</label>
+            <label class="form-check"><input type="checkbox" name="days" value="Tue"> Tue</label>
+            <label class="form-check"><input type="checkbox" name="days" value="Wed"> Wed</label>
+            <label class="form-check"><input type="checkbox" name="days" value="Thu"> Thu</label>
+            <label class="form-check"><input type="checkbox" name="days" value="Fri"> Fri</label>
+          </div>
+        </div>
+
+        <!-- Flavor -->
+        <div class="form-group">
+          <label class="form-label">Which broth flavor do you prefer?</label>
+          <div class="form-check-group flavor-group">
+            <label class="form-check"><input type="radio" name="flavor" value="Chicken Broth"> Chicken Broth</label>
+            <label class="form-check"><input type="radio" name="flavor" value="Beef Broth"> Beef Broth</label>
+            <label class="form-check"><input type="radio" name="flavor" value="Both"> Both</label>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-submit">
+          <button type="submit" class="btn btn--filled">Join our waitlist</button>
+        </div>
+      </form>
+
+      <!-- THANK YOU (shown after submit) -->
+      <div id="thank-you" class="thank-you">
+        <p class="thank-you-text">
+          Thanks for your interest!<br>
+          Stay tuned, we're cooking up the perfect batch for you.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
